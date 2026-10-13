@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07111f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="A.R.N.I.S.">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon.svg">
+<title>A.R.N.I.S. | Assistant personnel</title>
+<style>
+:root{color-scheme:dark;--bg:#050b14;--panel:#0c1727;--panel2:#101f33;--blue:#5cc8ff;--cyan:#a4edff;--text:#edf7ff;--muted:#8ba6bd;--line:#20384f}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#12365a 0%,var(--bg) 55%);color:var(--text);font:16px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100dvh}
+.app{max-width:760px;margin:auto;padding:env(safe-area-inset-top) 16px calc(20px + env(safe-area-inset-bottom))}
+header{display:flex;align-items:center;gap:13px;padding:22px 2px 18px}.orb{width:54px;height:54px;border-radius:50%;border:1px solid #5cc8ff99;display:grid;place-items:center;box-shadow:0 0 28px #168edb44,inset 0 0 20px #168edb33;color:var(--cyan);font-size:23px;position:relative}.orb:after{content:"";position:absolute;inset:7px;border:1px solid #5cc8ff55;border-radius:50%}h1{font-size:23px;letter-spacing:3px;margin:0} .sub{color:var(--muted);font-size:12px;letter-spacing:1.5px;margin-top:4px}.status{margin-left:auto;display:flex;align-items:center;gap:6px;color:#9fe7bf;font-size:11px;white-space:nowrap}.dot{width:7px;height:7px;border-radius:50%;background:#55e89a;box-shadow:0 0 10px #55e89a}
+.hero{border:1px solid #254864;border-radius:20px;padding:18px;background:linear-gradient(135deg,#10243aee,#091321ee);text-align:center;margin-bottom:14px}.ring{width:124px;height:124px;border-radius:50%;margin:2px auto 12px;display:grid;place-items:center;border:1px solid #54c8ff88;box-shadow:0 0 32px #169ee633,inset 0 0 26px #168edb22;position:relative}.ring:before,.ring:after{content:"";position:absolute;border-radius:50%;border:1px dashed #5cc8ff66;inset:9px}.ring:after{inset:20px;border-style:solid;opacity:.6}.ring span{font-size:30px;color:var(--cyan);z-index:1}.hero h2{font-size:17px;margin:0 0 6px}.hero p{font-size:13px;color:var(--muted);margin:0;line-height:1.5}
+.pills{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:14px 0}.pill{border:1px solid var(--line);border-radius:11px;background:#0b1725;padding:10px 3px;text-align:center;font-size:11px;color:#b9d8ed}.pill b{display:block;color:var(--blue);font-size:15px;margin-bottom:4px}
+.card{background:#0b1523;border:1px solid var(--line);border-radius:16px;margin:12px 0;overflow:hidden}.cardhead{padding:13px 15px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;font-weight:600;font-size:14px}.small{color:var(--muted);font-size:11px;font-weight:400}.chat{height:290px;overflow:auto;padding:13px;display:flex;flex-direction:column;gap:10px}.msg{max-width:90%;padding:11px 13px;border-radius:13px;font-size:14px;line-height:1.45;white-space:pre-wrap}.bot{align-self:flex-start;background:#10243a;border:1px solid #254864}.user{align-self:flex-end;background:#17446a;border:1px solid #2d6e9c}.compose{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line)}input,textarea{min-width:0;background:#07111d;color:var(--text);border:1px solid #29435a;border-radius:11px;padding:12px;font:inherit;outline:none}input:focus,textarea:focus{border-color:var(--blue)}#prompt{flex:1}.btn{border:1px solid #2e729d;background:#123a59;color:var(--text);border-radius:11px;padding:11px 13px;font:inherit;font-size:13px;cursor:pointer}.btn.primary{background:linear-gradient(135deg,#14689a,#164d79);border-color:#4cbaff}.btn:active{transform:scale(.98)}.btnrow{display:flex;flex-wrap:wrap;gap:8px;padding:12px}.memorybody{padding:12px}.memorybody p{font-size:12px;color:var(--muted);margin:0 0 10px;line-height:1.5}#memory{width:100%;min-height:76px;resize:vertical}.tools{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;padding:12px}.tool{padding:13px;text-align:left;background:#0d1c2c;border:1px solid #27425b;border-radius:12px;color:var(--text);cursor:pointer}.tool b{display:block;font-size:13px;margin-bottom:5px}.tool span{font-size:11px;color:var(--muted);line-height:1.4;display:block}.note{padding:12px 14px;color:#b7cadd;font-size:12px;line-height:1.5}.footer{text-align:center;color:#67839b;font-size:10px;padding:14px 0}.danger{border-color:#69434a;background:#28171c}.hide{display:none!important}
+@media(min-width:600px){.chat{height:340px}.hero{padding:24px}.app{padding-left:22px;padding-right:22px}}
+</style>
+</head>
+<body><main class="app">
+<header><div class="orb">A</div><div><h1>A.R.N.I.S.</h1><div class="sub">PERSONAL AI SYSTEM</div></div><div class="status"><i class="dot"></i> EN LIGNE</div></header>
+<section class="hero"><div class="ring"><span>✧</span></div><h2>Bonjour. Je suis A.R.N.I.S.</h2><p>Assistant personnel en initialisation.<br>Interface locale · Mémoire sur cet appareil</p></section>
+<div class="pills"><div class="pill"><b>01</b>Cerveau</div><div class="pill"><b>02</b>Voix</div><div class="pill"><b>03</b>Mémoire</div><div class="pill"><b>04</b>Commandes</div></div>
+<section class="card"><div class="cardhead"><span>◉ Conversation</span><span class="small" id="brainStatus">Mode prototype</span></div><div class="chat" id="chat" aria-live="polite"><div class="msg bot">Systèmes prêts. Je suis A.R.N.I.S., ton assistant personnel. Pour l'instant, mon cerveau utilise des réponses locales de démonstration. Tu peux tester la voix, enregistrer une mémoire et lancer les raccourcis disponibles.</div></div><form class="compose" id="chatForm"><input id="prompt" autocomplete="off" placeholder="Écris à A.R.N.I.S.…" aria-label="Message"><button class="btn primary" type="submit">Envoyer</button></form><div class="btnrow"><button class="btn" id="micBtn">🎙️ Parler</button><button class="btn" id="speakToggle">🔊 Voix : activée</button><button class="btn" id="clearChat">Effacer la discussion</button></div></section>
+<section class="card"><div class="cardhead"><span>▤ Mémoire personnelle</span><span class="small">Stockage local</span></div><div class="memorybody"><p>Ajoute les informations que tu veux qu'A.R.N.I.S. conserve sur cet appareil. N'y inscris pas de mots de passe ou de données sensibles.</p><textarea id="memory" placeholder="Ex. : J'aime les réponses courtes et le sport."></textarea><div class="btnrow" style="padding:10px 0 0"><button class="btn primary" id="saveMemory">Enregistrer la mémoire</button><button class="btn danger" id="deleteMemory">Effacer la mémoire</button></div><p id="memoryStatus" aria-live="polite"></p></div></section>
+<section class="card"><div class="cardhead"><span>⌘ Commandes iPhone</span><span class="small">Raccourcis autorisés</span></div><div class="tools">
+<button class="tool" id="openShortcuts"><b>↗ Ouvrir Raccourcis</b><span>Accéder à l'app Raccourcis d'Apple.</span></button>
+<button class="tool" id="openSettings"><b>⚙ Réglages</b><span>Ouvrir les réglages via un lien système si iOS l'autorise.</span></button>
+<button class="tool" id="openCalendar"><b>▦ Calendrier</b><span>Ouvrir une vue calendrier web.</span></button>
+<button class="tool" id="openWeather"><b>☼ Météo</b><span>Consulter la météo dans le navigateur.</span></button>
+</div><div class="note">Une page web ne peut pas contrôler librement iOS, lire tes notifications ou exécuter toutes les actions du téléphone. Les commandes sont limitées aux liens et autorisations disponibles.</div></section>
+<div class="footer">A.R.N.I.S. · Prototype local v0.1 · Aucune clé API intégrée</div>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+let voiceOn=true;
+const KEY='arnis_memory_v1';
+try{$('memory').value=localStorage.getItem(KEY)||'';}catch(e){}
+function addMsg(text,who){const d=document.createElement('div');d.className='msg '+who;d.textContent=text;$('chat').appendChild(d);$('chat').scrollTop=$('chat').scrollHeight;return d;}
+function speak(text){if(!voiceOn||!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='fr-FR';u.rate=.96;u.pitch=.9;const voices=window.speechSynthesis.getVoices();const fr=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith('fr'));if(fr)u.voice=fr;window.speechSynthesis.speak(u);}
+function getReply(raw){const q=raw.toLowerCase().trim();let mem='';try{mem=localStorage.getItem(KEY)||''}catch(e){}
+if(/bonjour|salut|hello|bonsoir/.test(q))return 'Bonjour. A.R.N.I.S. est opérationnel. Que souhaites-tu faire ?';
+if(/qui es-tu|ton nom|comment tu t'appelles/.test(q))return 'Je suis A.R.N.I.S., ton assistant personnel en version prototype.';
+if(/mémoire|que sais-tu de moi|tu te souviens/.test(q))return mem?'Voici ce que j’ai en mémoire sur cet appareil : '+mem:'Ma mémoire personnelle est encore vide. Tu peux ajouter des informations dans le panneau Mémoire.';
+if(/heure|date|quel jour/.test(q))return 'La date de cet appareil est : '+new Date().toLocaleString('fr-FR',{dateStyle:'full',timeStyle:'short'})+'.';
+if(/météo/.test(q))return 'Je peux ouvrir la météo dans le navigateur avec le raccourci Météo ci-dessous.';
+if(/raccourci|commande|iphone/.test(q))return 'Consulte le panneau Commandes iPhone. Je peux ouvrir certains liens, mais iOS ne permet pas à cette page de tout contrôler.';
+if(/aide|que peux-tu faire|fonction/.test(q))return 'Pour cette première version, je peux répondre à quelques commandes locales, parler à voix haute, utiliser la dictée si Safari la prend en charge, conserver une mémoire locale et ouvrir certains raccourcis. Pour des réponses vraiment intelligentes, il faudra ensuite connecter un modèle d’IA.';
+if(/merci/.test(q))return 'Avec plaisir. Systèmes à ta disposition.';
+return 'J’ai bien reçu ton message. Mon cerveau conversationnel avancé n’est pas encore connecté : cette version fonctionne sans API et ne peut donc pas répondre comme un grand modèle d’IA. Prochaine étape : ajouter un modèle gratuit compatible, sans exposer de clé secrète dans la page.';
+}
+$('chatForm').addEventListener('submit',e=>{e.preventDefault();const v=$('prompt').value.trim();if(!v)return;$('prompt').value='';addMsg(v,'user');const reply=getReply(v);setTimeout(()=>{addMsg(reply,'bot');speak(reply)},180);});
+$('speakToggle').addEventListener('click',()=>{voiceOn=!voiceOn;$('speakToggle').textContent=voiceOn?'🔊 Voix : activée':'🔇 Voix : coupée';if(!voiceOn&&'speechSynthesis'in window)window.speechSynthesis.cancel();});
+$('micBtn').addEventListener('click',()=>{const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){addMsg('La dictée vocale n’est pas disponible dans ce navigateur. Essaie Safari à jour et vérifie l’autorisation du micro.','bot');return;}try{const r=new SR();r.lang='fr-FR';r.interimResults=false;r.maxAlternatives=1;$('micBtn').textContent='🎙️ Écoute…';r.onresult=e=>{$('prompt').value=e.results[0][0].transcript;$('micBtn').textContent='🎙️ Parler';$('chatForm').requestSubmit();};r.onerror=()=>{$('micBtn').textContent='🎙️ Parler';addMsg('La reconnaissance vocale a échoué. Vérifie l’accès au micro et réessaie.','bot');};r.onend=()=>$('micBtn').textContent='🎙️ Parler';r.start();}catch(e){addMsg('Impossible de démarrer le micro dans ce contexte.','bot');$('micBtn').textContent='🎙️ Parler';}});
+$('saveMemory').addEventListener('click',()=>{try{localStorage.setItem(KEY,$('memory').value);$('memoryStatus').textContent='Mémoire enregistrée sur cet appareil.';}catch(e){$('memoryStatus').textContent='Le stockage local n’est pas disponible.';}});
+$('deleteMemory').addEventListener('click',()=>{try{localStorage.removeItem(KEY)}catch(e){}$('memory').value='';$('memoryStatus').textContent='Mémoire effacée.';});
+$('clearChat').addEventListener('click',()=>{$('chat').innerHTML='';addMsg('Discussion effacée. Je suis prêt pour une nouvelle conversation.','bot');});
+$('openShortcuts').addEventListener('click',()=>{location.href='shortcuts://';setTimeout(()=>{addMsg('Si Raccourcis ne s’ouvre pas, lance l’app Raccourcis manuellement.','bot')},800);});
+$('openSettings').addEventListener('click',()=>{addMsg('Pour des raisons de sécurité, iOS peut bloquer les liens vers Réglages. Ouvre Réglages manuellement si le lien ne fonctionne pas.','bot');});
+$('openCalendar').addEventListener('click',()=>window.open('https://calendar.google.com/calendar/u/0/r','_blank','noopener'));
+$('openWeather').addEventListener('click',()=>window.open('https://www.google.com/search?q=m%C3%A9t%C3%A9o+aujourd%27hui','_blank','noopener'));
+if('serviceWorker'in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+</script>
+</body></html>
